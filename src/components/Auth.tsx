@@ -99,7 +99,7 @@ export function Auth() {
           </button>
         </div>
       </div>
-      <footer>
+      <footer className="position-absolute bottom-0">
         <p className="text-center text-gray-500 text-sm">Developed by Mohamed Althaf Hussain N</p>
       </footer>
     </div>
