@@ -33,11 +33,21 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
             .eq('id', session.user.id)
             .maybeSingle();
 
-          if (!profile) {
-            await supabase.from('profiles').insert({
-              id: session.user.id,
-              email: session.user.email || '',
-            });
+          // if (!profile) {
+          //   await supabase.from('profiles').upsert([
+          //     {
+          //       id: session.user.id,
+          //       email: session.user.email || '',
+          //     }
+          //   ]);
+          // }
+          if (session?.user) {
+            await supabase.from('profiles').upsert([
+              {
+                id: session.user.id,
+                email: session.user.email || '',
+              }
+            ]);
           }
         }
       })();
