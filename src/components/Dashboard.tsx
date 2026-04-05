@@ -114,6 +114,9 @@ export function Dashboard() {
           </div>
         </div>
       </div>
+      <footer>
+        <p className="text-center text-gray-500 text-sm">Developed by Mohamed Althaf Hussain N</p>
+      </footer>
     </div>
   );
 }
