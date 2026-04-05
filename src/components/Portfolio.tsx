@@ -87,7 +87,9 @@ export function Portfolio({ userId }: PortfolioProps) {
               <div className="flex flex-wrap justify-center md:justify-start gap-4">
                 {profile.email && (
                   <a
-                    href={`mailto:${profile.email}`}
+                    href={`https://mail.google.com/mail/?view=cm&fs=1&to=${profile.email}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center space-x-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg transition"
                   >
                     <Mail className="w-5 h-5" />
